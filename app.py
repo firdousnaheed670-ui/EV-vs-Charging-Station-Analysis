@@ -17,26 +17,52 @@ h1, h2, h3, h4, h5, h6, p, div {
     color: #000000 !important;
 }
 
-/* Dropdowns, sliders, text inputs */
-.stSelectbox label, .stSlider label, .stTextInput label {
-    color: #000000 !important; /* Label text visible */
+/* Dropdowns (Selectbox) */
+.stSelectbox div, .stSelectbox label {
+    color: #000000 !important;
+    background-color: #ffffff !important;
 }
-.stSelectbox div, .stTextInput input {
-    color: #000000 !important; /* User-entered text visible */
-    background-color: #ffffff !important; /* White background for contrast */
+.stSelectbox div:hover, .stSelectbox div:focus {
+    background-color: #e6f0ff !important; /* Light blue highlight */
+    color: #000000 !important;
+}
+
+/* Text input */
+.stTextInput input {
+    color: #000000 !important;
+    background-color: #ffffff !important;
 }
 
 /* Buttons */
 .stButton button {
-    color: #ffffff !important; /* White text */
-    background-color: #0073e6 !important; /* Blue button */
+    color: #ffffff !important;
+    background-color: #0073e6 !important;
     border-radius: 5px;
 }
+.stButton button:hover {
+    background-color: #005bb5 !important; /* Darker blue on hover */
+    color: #ffffff !important;
+}
 
-/* Dataframe/Table */
-[data-testid="stDataFrame"] {
-    background-color: #ffffff !important; /* White table background */
-    color: #000000 !important; /* Black text */
+/* Download button */
+.stDownloadButton button {
+    color: #ffffff !important;
+    background-color: #28a745 !important; /* Green button */
+    border-radius: 5px;
+}
+.stDownloadButton button:hover {
+    background-color: #1e7e34 !important; /* Darker green on hover */
+    color: #ffffff !important;
+}
+
+/* Expander (See methodology) */
+.streamlit-expanderHeader {
+    color: #000000 !important;
+    background-color: #f7f9fc !important;
+}
+.streamlit-expanderHeader:hover {
+    background-color: #e6f0ff !important;
+    color: #000000 !important;
 }
 </style>
 """
