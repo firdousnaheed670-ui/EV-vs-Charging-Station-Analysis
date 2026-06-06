@@ -9,12 +9,21 @@ page_bg = """
 [data-testid="stAppViewContainer"] {
     background-image: linear-gradient(to right, #f0f4f8, #d9e2ec);
     background-size: cover;
+    color: #000000; /* Ensures text is black */
 }
+
 [data-testid="stHeader"] {
     background: rgba(0,0,0,0);
+    color: #000000; /* Header text color */
 }
+
 [data-testid="stSidebar"] {
     background-color: #f7f9fc;
+    color: #000000; /* Sidebar text color */
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+    color: #000000 !important; /* Force all text to black */
 }
 </style>
 """
