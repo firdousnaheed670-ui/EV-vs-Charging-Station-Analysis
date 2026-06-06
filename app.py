@@ -2,54 +2,115 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.title("EV Growth vs Charging Stations in India")
+# ================================
+# 📌 Static Information
+# ================================
+st.title("EV vs Charging Stations Analysis")
+st.subheader("Exploring EV Adoption vs Infrastructure Growth Across States")
+
+st.markdown("""
+This dashboard compares **Electric Vehicle (EV) adoption trends** with the availability of 
+**charging infrastructure** across Indian states.  
+Use the filters below to explore data by year and region.
+""")
+
+st.info("Instructions: Select a state and year range using the filters below. Charts and insights will update dynamically.")
 
 # Load datasets
-ev_df = pd.read_excel("data/electric_vehicle.xlsx")   
-station_df = pd.read_csv("data/charging_stations.csv") 
+ev_df = pd.read_excel("data/electric_vehicle.xlsx")   # columns: state, year, ev_count
+station_df = pd.read_csv("data/charging_stations.csv")  # columns: state, year, station_count
 
-# Merge on common columns (e.g., state + year)
-df_comb = pd.merge(ev_df, station_df, on=["state", "year"],how="inner")
+# Merge datasets
+df_comb = pd.merge(ev_df, station_df, on=["state", "year"], how="inner")
 
-# Show preview
-st.write("Combined Dataset Preview:", df_comb.head())
+# Dataset Snapshot
+st.header("📊 Dataset Snapshot")
+st.dataframe(df_comb.head())
 
-# Plot EV growth vs Charging Stations
-st.subheader("EV Growth vs Charging Infrastructure")
-plt.figure(figsize=(8,5))
-plt.plot(df_comb["year"], df_comb["ev_count"], label="EVs")
-plt.plot(df_comb["year"], df_comb["station_count"], label="Charging Stations")
-plt.xlabel("Year")
-plt.ylabel("Count")
-plt.legend()
-st.pyplot(plt)
-# Dropdown to select a state
-selected_state = st.selectbox("Choose a State:", df_comb["state"].unique())
+# Key Insights
+st.header("💡 Key Insights")
+st.success("EV growth has outpaced charging stations in several states.")
+st.info("Delhi shows fastest charging infrastructure growth.")
+st.warning("Gujarat highlights imbalance: strong EV growth but fewer stations.")
 
-# Filter data based on selection
-filtered_df = df_comb[df_comb["state"] == selected_state]
+# ================================
+# 🎛️ Interactive Elements
+# ================================
+st.header("🎛️ Interactive Exploration")
 
-st.write(f"Data for {selected_state}", filtered_df)
+# Filters
+states = df_comb["state"].unique()
+selected_state = st.selectbox("Choose Region (State):", states)
 
-# Plot for selected state
-plt.figure(figsize=(8,5))
-plt.plot(filtered_df["year"], filtered_df["ev_count"], label="EVs")
-plt.plot(filtered_df["year"], filtered_df["station_count"], label="Charging Stations")
-plt.legend()
-st.pyplot(plt)
-#Slider for year range
 year_range = st.slider("Select Year Range:",
                        int(df_comb["year"].min()),
                        int(df_comb["year"].max()),
                        (int(df_comb["year"].min()), int(df_comb["year"].max())))
 
-filtered_year_df = df_comb[(df_comb["year"] >= year_range[0]) & (df_comb["year"] <= year_range[1])]
-st.write("Filtered Data:", filtered_year_df)
+# Filtered data
+filtered_df = df_comb[(df_comb["state"] == selected_state) &
+                      (df_comb["year"] >= year_range[0]) &
+                      (df_comb["year"] <= year_range[1])]
 
+st.write(f"Filtered Data for {selected_state} ({year_range[0]}–{year_range[1]})")
+st.dataframe(filtered_df)
 
+# Action Buttons
+if st.button("Run Analysis"):
+    st.metric("Total EVs", filtered_df["ev_count"].sum())
+    st.metric("Total Charging Stations", filtered_df["station_count"].sum())
 
-# Key insights
-st.markdown("### Insights")
-st.markdown("- Maharashtra leads in EV adoption.")
-st.markdown("- Delhi shows fastest charging infra growth.")
-st.markdown("- Gujarat has imbalance: strong EV growth but fewer stations.")
+st.download_button("Download Report",
+                   filtered_df.to_csv(index=False).encode("utf-8"),
+                   "filtered_data.csv",
+                   "text/csv")
+
+# ================================
+# 📈 Dynamic Charts
+# ================================
+st.header("📈 EV Growth vs Charging Stations")
+
+# Line Chart
+st.line_chart(filtered_df.set_index("year")[["ev_count", "station_count"]])
+
+# Bar Chart
+st.header("📊 State-wise Comparison")
+statewise = df_comb.groupby("state")[["ev_count", "station_count"]].sum()
+st.bar_chart(statewise)
+
+# ================================
+# 📝 User Input
+# ================================
+st.header("📝 Custom Query")
+custom_state = st.text_input("Enter custom state name:")
+if custom_state:
+    custom_df = df_comb[df_comb["state"].str.lower() == custom_state.lower()]
+    if not custom_df.empty:
+        st.write(f"Results for {custom_state}", custom_df)
+        st.line_chart(custom_df.set_index("year")[["ev_count", "station_count"]])
+    else:
+        st.error("State not found in dataset.")
+
+# ================================
+# 📂 Expandable Section
+# ================================
+with st.expander("See Methodology"):
+    st.markdown("""
+    - Data sources: EV adoption dataset (Excel) and charging stations dataset (CSV).  
+    - Merged on **state** and **year** columns.  
+    - Visualizations created using Streamlit’s chart components.  
+    - Insights derived from comparing growth rates and infrastructure availability.
+    """)
+
+# ================================
+# ✅ Conclusion & Suggested Actions
+# ================================
+st.header("✅ Conclusion & Suggested Actions")
+st.markdown("""
+- **Conclusion:** EV adoption is accelerating faster than charging infrastructure in many states.  
+- **Suggested Actions:**  
+  - Invest in charging infrastructure to match EV growth.  
+  - Focus on states with high EV adoption but low station counts (e.g., Gujarat).  
+  - Encourage balanced policy support for both EVs and infrastructure.
+""")
+
