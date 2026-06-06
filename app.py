@@ -1,6 +1,24 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+# Page config
+st.set_page_config(page_title="EV vs Charging Stations", layout="wide")
+# Add background with CSS
+page_bg = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background-image: linear-gradient(to right, #f0f4f8, #d9e2ec);
+    background-size: cover;
+}
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0);
+}
+[data-testid="stSidebar"] {
+    background-color: #f7f9fc;
+}
+</style>
+"""
+st.markdown(page_bg, unsafe_allow_html=True)
 
 # ================================
 # 📌 Static Information
