@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 st.title("EV Growth vs Charging Stations in India")
 
 # Load datasets
-ev_df = pd.read_csv("file_path")      # replace with actual extension, e.g., file_path.csv
-station_df = pd.read_csv("file_path1")  # replace with actual extension, e.g., file_path1.csv
+ev_df = pd.read_csv("file_path")      
+station_df = pd.read_csv("file_path1")  
 
 # Merge on common columns (e.g., state + year)
 df_comb = pd.merge(ev_df, station_df, on=["State", "Year"])
