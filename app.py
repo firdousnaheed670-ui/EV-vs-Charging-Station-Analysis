@@ -9,7 +9,7 @@ ev_df = pd.read_excel("data/electric_vehicle.xlsx")
 station_df = pd.read_csv("data/charging_stations.csv") 
 
 # Merge on common columns (e.g., state + year)
-df_comb = pd.merge(ev_df, station_df, on=["State", "Year"])
+df_comb = pd.merge(ev_df, station_df, on=["State", "Year"],how="inner")
 
 # Show preview
 st.write("Combined Dataset Preview:", df_comb.head())
