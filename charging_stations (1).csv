@@ -1,0 +1,26 @@
+state,year,station_count
+Maharashtra,2020,250
+Maharashtra,2021,400
+Maharashtra,2022,750
+Maharashtra,2023,1200
+Maharashtra,2024,1900
+Delhi,2020,350
+Delhi,2021,600
+Delhi,2022,900
+Delhi,2023,1500
+Delhi,2024,2200
+Karnataka,2020,180
+Karnataka,2021,300
+Karnataka,2022,550
+Karnataka,2023,800
+Karnataka,2024,1300
+Tamil Nadu,2020,150
+Tamil Nadu,2021,250
+Tamil Nadu,2022,400
+Tamil Nadu,2023,600
+Tamil Nadu,2024,900
+Gujarat,2020,100
+Gujarat,2021,180
+Gujarat,2022,280
+Gujarat,2023,400
+Gujarat,2024,700
