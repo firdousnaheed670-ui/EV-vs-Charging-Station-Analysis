@@ -37,6 +37,15 @@ plt.plot(filtered_df["year"], filtered_df["ev_count"], label="EVs")
 plt.plot(filtered_df["year"], filtered_df["station_count"], label="Charging Stations")
 plt.legend()
 st.pyplot(plt)
+#Slider for year range
+year_range = st.slider("Select Year Range:",
+                       int(df_comb["year"].min()),
+                       int(df_comb["year"].max()),
+                       (int(df_comb["year"].min()), int(df_comb["year"].max())))
+
+filtered_year_df = df_comb[(df_comb["year"] >= year_range[0]) & (df_comb["year"] <= year_range[1])]
+st.write("Filtered Data:", filtered_year_df)
+
 
 
 # Key insights
