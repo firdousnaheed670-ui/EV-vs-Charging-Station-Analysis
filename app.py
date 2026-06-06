@@ -6,28 +6,42 @@ st.set_page_config(page_title="EV vs Charging Stations", layout="wide")
 # Add background with CSS
 page_bg = """
 <style>
+/* Background */
 [data-testid="stAppViewContainer"] {
     background-image: linear-gradient(to right, #f0f4f8, #d9e2ec);
     background-size: cover;
-    color: #000000; /* Ensures text is black */
 }
 
-[data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
-    color: #000000; /* Header text color */
-}
-
-[data-testid="stSidebar"] {
-    background-color: #f7f9fc;
-    color: #000000; /* Sidebar text color */
-}
-
+/* General text */
 h1, h2, h3, h4, h5, h6, p, div {
-    color: #000000 !important; /* Force all text to black */
+    color: #000000 !important;
+}
+
+/* Dropdowns, sliders, text inputs */
+.stSelectbox label, .stSlider label, .stTextInput label {
+    color: #000000 !important; /* Label text visible */
+}
+.stSelectbox div, .stTextInput input {
+    color: #000000 !important; /* User-entered text visible */
+    background-color: #ffffff !important; /* White background for contrast */
+}
+
+/* Buttons */
+.stButton button {
+    color: #ffffff !important; /* White text */
+    background-color: #0073e6 !important; /* Blue button */
+    border-radius: 5px;
+}
+
+/* Dataframe/Table */
+[data-testid="stDataFrame"] {
+    background-color: #ffffff !important; /* White table background */
+    color: #000000 !important; /* Black text */
 }
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
+
 
 # ================================
 # 📌 Static Information
