@@ -17,8 +17,10 @@ st.write("Combined Dataset Preview:", df_comb.head())
 # Plot EV growth vs Charging Stations
 st.subheader("EV Growth vs Charging Infrastructure")
 plt.figure(figsize=(8,5))
-plt.plot(df_comb["Year"], df_comb["EV_Count"], label="EVs")
-plt.plot(df_comb["Year"], df_comb["Station_Count"], label="Charging Stations")
+plt.plot(df_comb["year"], df_comb["ev_count"], label="EVs")
+plt.plot(df_comb["year"], df_comb["station_Count"], label="Charging Stations")
+plt.xlabel("Year")
+plt.ylabel("Count")
 plt.legend()
 st.pyplot(plt)
 
