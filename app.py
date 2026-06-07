@@ -84,45 +84,7 @@ div[aria-selected="true"] {
     color: #000000 !important;
     background-color: #ffffff !important;
 }
-st.markdown("""
-<style>
 
-/* Dropdown popup container */
-div[data-baseweb="popover"] {
-    background-color: white !important;
-}
-
-/* Listbox */
-div[role="listbox"] {
-    background-color: white !important;
-    border: 1px solid #d0d7de !important;
-}
-
-/* Each option */
-div[role="option"] {
-    background-color: white !important;
-    color: black !important;
-}
-
-/* Hovered option */
-div[role="option"]:hover {
-    background-color: #e6f0ff !important;
-    color: black !important;
-}
-
-/* Selected option */
-div[aria-selected="true"] {
-    background-color: #dbeafe !important;
-    color: black !important;
-}
-
-/* Force all text inside dropdown */
-div[data-baseweb="popover"] * {
-    color: black !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
