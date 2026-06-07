@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="EV vs Charging Stations", layout="wide")
 # Title
 st.title("EV vs Charging Stations Analysis")
-# Problem Statement (static info under title)
+# Problem Statement (directly under title)
 st.markdown(
     """
     **Problem Statement:**  
