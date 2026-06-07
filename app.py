@@ -20,11 +20,9 @@ h1, h2, h3, h4, h5, h6, p, div {
 /* Dropdown (Selectbox) */
 .stSelectbox div, .stSelectbox label {
     color: #000000 !important;
-    background-color: #ffffff !important;
 }
 .stSelectbox [role="listbox"] {
     background-color: #ffffff !important; /* Dropdown menu background */
-    color: #000000 !important;            /* Dropdown options text */
 }
 .stSelectbox [role="option"] {
     background-color: #ffffff !important;
@@ -75,7 +73,6 @@ h1, h2, h3, h4, h5, h6, p, div {
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
-
 
 
 # ================================
