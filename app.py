@@ -75,8 +75,6 @@ h1, h2, h3, h4, h5, h6, p, div {
 st.markdown(page_bg, unsafe_allow_html=True)
 
 
-
-
 # ================================
 # 📌 Static Information
 # ================================
