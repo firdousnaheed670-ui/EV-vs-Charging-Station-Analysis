@@ -6,41 +6,82 @@ st.set_page_config(page_title="EV vs Charging Stations", layout="wide")
 # Add background with CSS
 page_bg = """
 <style>
-/* Background */
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
 [data-testid="stAppViewContainer"] {
     background-image: linear-gradient(to right, #f0f4f8, #d9e2ec);
     background-size: cover;
 }
 
-/* General text */
-h1, h2, h3, h4, h5, h6, p, div, label {
+/* =========================
+   TEXT
+========================= */
+html, body, p, div, span, label,
+h1, h2, h3, h4, h5, h6 {
     color: #000000 !important;
 }
 
-/* Selectbox field */
+/* =========================
+   SELECTBOX
+========================= */
 div[data-baseweb="select"] > div {
     background-color: #ffffff !important;
     color: #000000 !important;
-    border: 1px solid #d0d7de !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
 }
 
-/* Selected value */
+/* Selected value text */
 div[data-baseweb="select"] span {
     color: #000000 !important;
 }
 
-/* Dropdown menu */
-div[role="listbox"] {
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+/* Main popup */
+div[data-baseweb="popover"] {
+    background: #ffffff !important;
+}
+
+/* Force all dropdown text */
+div[data-baseweb="popover"] * {
+    color: #000000 !important;
+}
+
+/* Dropdown list */
+ul {
     background-color: #ffffff !important;
 }
 
-/* Dropdown options */
+/* Options */
+li {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Hover */
+li:hover {
+    background-color: #e6f0ff !important;
+    color: #000000 !important;
+}
+
+/* BaseWeb listbox */
+div[role="listbox"] {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* Individual option */
 div[role="option"] {
     background-color: #ffffff !important;
     color: #000000 !important;
 }
 
-/* Hover effect */
+/* Hover option */
 div[role="option"]:hover {
     background-color: #e6f0ff !important;
     color: #000000 !important;
@@ -52,41 +93,66 @@ div[aria-selected="true"] {
     color: #000000 !important;
 }
 
-/* Text input */
+/* =========================
+   TEXT INPUTS
+========================= */
 .stTextInput input {
-    color: #000000 !important;
     background-color: #ffffff !important;
+    color: #000000 !important;
 }
 
-/* Buttons */
+/* =========================
+   BUTTONS
+========================= */
 .stButton button {
-    color: #ffffff !important;
     background-color: #0073e6 !important;
-    border-radius: 5px;
+    color: white !important;
+    border-radius: 6px;
 }
 
 .stButton button:hover {
     background-color: #005bb5 !important;
 }
 
-/* Download button */
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
 .stDownloadButton button {
-    color: #ffffff !important;
     background-color: #28a745 !important;
+    color: white !important;
+    border-radius: 6px;
 }
 
 .stDownloadButton button:hover {
     background-color: #1e7e34 !important;
 }
 
-/* Expander */
+/* =========================
+   EXPANDER
+========================= */
 .streamlit-expanderHeader {
-    color: #000000 !important;
     background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: #e6f0ff !important;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #000000 !important;
 }
 
 </style>
 """
+
 st.markdown(page_bg, unsafe_allow_html=True)
 # ================================
 # 📌 Static Information
