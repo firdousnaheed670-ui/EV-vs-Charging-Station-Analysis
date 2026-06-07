@@ -13,23 +13,42 @@ page_bg = """
 }
 
 /* General text */
-h1, h2, h3, h4, h5, h6, p, div {
+h1, h2, h3, h4, h5, h6, p, div, label {
     color: #000000 !important;
 }
 
-/* Dropdown (Selectbox) */
-.stSelectbox div, .stSelectbox label {
+/* Selectbox field */
+div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #d0d7de !important;
+}
+
+/* Selected value */
+div[data-baseweb="select"] span {
     color: #000000 !important;
 }
-.stSelectbox [role="listbox"] {
-    background-color: #ffffff !important; /* Dropdown menu background */
+
+/* Dropdown menu */
+div[role="listbox"] {
+    background-color: #ffffff !important;
 }
-.stSelectbox [role="option"] {
-    background-color: #ffffff !important; /* Option background */
-    color: #000000 !important;            /* Option text */
+
+/* Dropdown options */
+div[role="option"] {
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
-.stSelectbox [role="option"]:hover {
-    background-color: #e6f0ff !important; /* Highlight on hover */
+
+/* Hover effect */
+div[role="option"]:hover {
+    background-color: #e6f0ff !important;
+    color: #000000 !important;
+}
+
+/* Selected option */
+div[aria-selected="true"] {
+    background-color: #dbeafe !important;
     color: #000000 !important;
 }
 
@@ -45,35 +64,29 @@ h1, h2, h3, h4, h5, h6, p, div {
     background-color: #0073e6 !important;
     border-radius: 5px;
 }
+
 .stButton button:hover {
     background-color: #005bb5 !important;
-    color: #ffffff !important;
 }
 
 /* Download button */
 .stDownloadButton button {
     color: #ffffff !important;
     background-color: #28a745 !important;
-    border-radius: 5px;
-}
-.stDownloadButton button:hover {
-    background-color: #1e7e34 !important;
-    color: #ffffff !important;
 }
 
-/* Expander (See methodology) */
+.stDownloadButton button:hover {
+    background-color: #1e7e34 !important;
+}
+
+/* Expander */
 .streamlit-expanderHeader {
     color: #000000 !important;
     background-color: #ffffff !important;
 }
-.streamlit-expanderHeader:hover {
-    background-color: #e6f0ff !important;
-    color: #000000 !important;
-}
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
-
 
 # ================================
 # 📌 Static Information
