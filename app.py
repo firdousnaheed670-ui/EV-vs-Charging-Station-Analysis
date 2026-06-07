@@ -230,18 +230,7 @@ st.header("📊 State-wise Comparison")
 statewise = df_comb.groupby("state")[["ev_count", "station_count"]].sum()
 st.bar_chart(statewise)
 
-# ================================
-# 📝 User Input
-# ================================
-st.header("📝 Custom Query")
-custom_state = st.text_input("Enter custom state name:")
-if custom_state:
-    custom_df = df_comb[df_comb["state"].str.lower() == custom_state.lower()]
-    if not custom_df.empty:
-        st.write(f"Results for {custom_state}", custom_df)
-        st.line_chart(custom_df.set_index("year")[["ev_count", "station_count"]])
-    else:
-        st.error("State not found in dataset.")
+
 
 # ================================
 # 📂 Expandable Section
