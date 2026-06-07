@@ -178,7 +178,7 @@ This dashboard compares **Electric Vehicle (EV) adoption trends** with the avail
 Use the filters below to explore data by year and region.
 """)
 
-st.info("Instructions: Select a state and year range using the filters below. Charts and insights will update dynamically.")
+
 
 # Load datasets
 ev_df = pd.read_excel("data/electric_vehicle.xlsx")   # columns: state, year, ev_count
