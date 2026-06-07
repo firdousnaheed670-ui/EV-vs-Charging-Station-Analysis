@@ -3,6 +3,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Page config
 st.set_page_config(page_title="EV vs Charging Stations", layout="wide")
+# Title
+st.title("EV vs Charging Stations Analysis")
+
+# Problem Statement (static info under title)
+st.markdown(
+    """
+    **Problem Statement:**  
+    Electric vehicle adoption in India is growing rapidly, but the expansion of charging infrastructure has not kept pace.  
+    This imbalance creates accessibility challenges for EV users and highlights the need for better planning and investment in charging stations.
+    """,
+    unsafe_allow_html=True
+)
 # Add background with CSS
 page_bg = """
 <style>
