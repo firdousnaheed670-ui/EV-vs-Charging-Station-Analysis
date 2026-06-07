@@ -4,90 +4,45 @@ import matplotlib.pyplot as plt
 # Page config
 st.set_page_config(page_title="EV vs Charging Stations", layout="wide")
 # Add background with CSS
-page_bg = """
+st.markdown("""
 <style>
-/* Background */
-[data-testid="stAppViewContainer"] {
-    background-image: linear-gradient(to right, #f0f4f8, #d9e2ec);
-    background-size: cover;
+
+/* Dropdown popup container */
+div[data-baseweb="popover"] {
+    background-color: white !important;
 }
 
-/* General text */
-h1, h2, h3, h4, h5, h6, p, div, label {
-    color: #000000 !important;
-}
-
-/* Selectbox field */
-div[data-baseweb="select"] > div {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+/* Listbox */
+div[role="listbox"] {
+    background-color: white !important;
     border: 1px solid #d0d7de !important;
 }
 
-/* Selected value */
-div[data-baseweb="select"] span {
-    color: #000000 !important;
-}
-
-/* Dropdown menu */
-div[role="listbox"] {
-    background-color: #ffffff !important;
-}
-
-/* Dropdown options */
+/* Each option */
 div[role="option"] {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+    background-color: white !important;
+    color: black !important;
 }
 
-/* Hover effect */
+/* Hovered option */
 div[role="option"]:hover {
     background-color: #e6f0ff !important;
-    color: #000000 !important;
+    color: black !important;
 }
 
 /* Selected option */
 div[aria-selected="true"] {
     background-color: #dbeafe !important;
-    color: #000000 !important;
+    color: black !important;
 }
 
-/* Text input */
-.stTextInput input {
-    color: #000000 !important;
-    background-color: #ffffff !important;
+/* Force all text inside dropdown */
+div[data-baseweb="popover"] * {
+    color: black !important;
 }
 
-/* Buttons */
-.stButton button {
-    color: #ffffff !important;
-    background-color: #0073e6 !important;
-    border-radius: 5px;
-}
-
-.stButton button:hover {
-    background-color: #005bb5 !important;
-}
-
-/* Download button */
-.stDownloadButton button {
-    color: #ffffff !important;
-    background-color: #28a745 !important;
-}
-
-.stDownloadButton button:hover {
-    background-color: #1e7e34 !important;
-}
-
-/* Expander */
-.streamlit-expanderHeader {
-    color: #000000 !important;
-    background-color: #ffffff !important;
-}
 </style>
-"""
-st.markdown(page_bg, unsafe_allow_html=True)
-
+""", unsafe_allow_html=True)
 # ================================
 # 📌 Static Information
 # ================================
