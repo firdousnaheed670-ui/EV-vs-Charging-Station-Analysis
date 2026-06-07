@@ -17,13 +17,21 @@ h1, h2, h3, h4, h5, h6, p, div {
     color: #000000 !important;
 }
 
-/* Dropdowns (Selectbox) */
+/* Dropdown (Selectbox) */
 .stSelectbox div, .stSelectbox label {
     color: #000000 !important;
     background-color: #ffffff !important;
 }
-.stSelectbox div:hover, .stSelectbox div:focus {
-    background-color: #e6f0ff !important; /* Light blue highlight */
+.stSelectbox [role="listbox"] {
+    background-color: #ffffff !important; /* Dropdown menu background */
+    color: #000000 !important;            /* Dropdown options text */
+}
+.stSelectbox [role="option"] {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+.stSelectbox [role="option"]:hover {
+    background-color: #e6f0ff !important; /* Highlight on hover */
     color: #000000 !important;
 }
 
@@ -40,18 +48,18 @@ h1, h2, h3, h4, h5, h6, p, div {
     border-radius: 5px;
 }
 .stButton button:hover {
-    background-color: #005bb5 !important; /* Darker blue on hover */
+    background-color: #005bb5 !important;
     color: #ffffff !important;
 }
 
 /* Download button */
 .stDownloadButton button {
     color: #ffffff !important;
-    background-color: #28a745 !important; /* Green button */
+    background-color: #28a745 !important;
     border-radius: 5px;
 }
 .stDownloadButton button:hover {
-    background-color: #1e7e34 !important; /* Darker green on hover */
+    background-color: #1e7e34 !important;
     color: #ffffff !important;
 }
 
@@ -67,6 +75,7 @@ h1, h2, h3, h4, h5, h6, p, div {
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
+
 
 
 # ================================
