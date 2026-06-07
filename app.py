@@ -3,7 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Page config
 st.set_page_config(page_title="EV vs Charging Stations", layout="wide")
-
+# Title
+st.title("EV vs Charging Stations Analysis")
 # Problem Statement (static info under title)
 st.markdown(
     """
@@ -13,8 +14,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-# Intro/Instructions
-st.write("Use the filters below to explore data by year and region.")
+
 # Add background with CSS
 page_bg = """
 <style>
