@@ -1,9 +1,10 @@
 # 🚗⚡ EV Growth vs Charging Infrastructure in India
-
-## 📖 Overview
-This project explores the fascinating relationship between **Electric Vehicle (EV) adoption** and the growth of **charging infrastructure** across India. With the rapid rise of EVs, the availability of charging stations has become a critical factor in sustainable mobility. This analysis highlights trends, gaps, and insights that can guide policymakers, businesses, and researchers.
-
+## 📌 Problem Statement
+Electric vehicle adoption in India is growing rapidly, but the expansion of charging infrastructure has not kept pace.  
+This imbalance creates accessibility challenges for EV users and highlights the need for better planning and investment in charging stations.
 ---
+## 🚀 Live Demo
+Try the app here: [Open Live Demo](https://firdousnaheed670-ui-ev-vs-charging-station-analysis-app-moqcks.streamlit.app/)
 
 ## 📊 Datasets
 - **Electric Vehicle Dataset**: Contains yearly EV adoption statistics across states.
@@ -26,8 +27,3 @@ Both datasets are merged to uncover correlations between EV growth and charging 
 - **Streamlit** (Interactive Web App Deployment)
 
 ---
-
-## 🚀 How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/firdousnaheed670-ui/EV-vs-Charging-Station-Analysis.git
