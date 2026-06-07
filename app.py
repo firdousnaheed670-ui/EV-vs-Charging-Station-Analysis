@@ -25,8 +25,8 @@ h1, h2, h3, h4, h5, h6, p, div {
     background-color: #ffffff !important; /* Dropdown menu background */
 }
 .stSelectbox [role="option"] {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+    background-color: #ffffff !important; /* Option background */
+    color: #000000 !important;            /* Option text */
 }
 .stSelectbox [role="option"]:hover {
     background-color: #e6f0ff !important; /* Highlight on hover */
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6, p, div {
 /* Expander (See methodology) */
 .streamlit-expanderHeader {
     color: #000000 !important;
-    background-color: #f7f9fc !important;
+    background-color: #ffffff !important;
 }
 .streamlit-expanderHeader:hover {
     background-color: #e6f0ff !important;
@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6, p, div {
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
+
 
 
 # ================================
