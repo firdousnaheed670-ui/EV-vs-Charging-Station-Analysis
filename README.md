@@ -41,7 +41,7 @@ EV-vs-Charging-Station-Analysis/
 
 
 │── data/
-
+|   |
 │   ├── charging_stations.csv
 │   ├── electric_vehicle.xlsx
 │   └── README.md
