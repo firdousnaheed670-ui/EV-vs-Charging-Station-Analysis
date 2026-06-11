@@ -10,7 +10,7 @@ Electric vehicle adoption in India is growing rapidly, but the expansion of char
 This imbalance creates accessibility challenges for EV users and highlights the need for better planning and investment in charging stations.
 
 ---
-## 🚀 **Live Demo**
+ 🚀 **Live Demo**
 Try the app here: [Open Live Demo](https://firdousnaheed670-ui-ev-vs-charging-station-analysis-app-moqcks.streamlit.app/)
 
 ## 📊 **Datasets**
