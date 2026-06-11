@@ -37,6 +37,7 @@ Both datasets are merged to uncover correlations between EV growth and charging 
 
 ---
  📂  **Project Structure**
+```bash
 │── data/
 │   ├── charging_stations.csv
 │   ├── electric_vehicle.xlsx
@@ -45,6 +46,7 @@ Both datasets are merged to uncover correlations between EV growth and charging 
 │── app.py
 │── requirements.txt
 │── README.md
+```
 
 
 ---
