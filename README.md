@@ -1,8 +1,8 @@
-# 🚗⚡ **EV Growth vs Charging Infrastructure in India**
+ 🚗⚡ **EV Growth vs Charging Infrastructure in India**
 
 
 ---
-## 📌** Problem Statement**
+📌** Problem Statement**
 
 
 
@@ -11,9 +11,10 @@ This imbalance creates accessibility challenges for EV users and highlights the 
 
 ---
  🚀 **Live Demo**
-Try the app here: [Open Live Demo](https://firdousnaheed670-ui-ev-vs-charging-station-analysis-app-moqcks.streamlit.app/)
+Try the app here: [Open Live Demo](https://firdousnaheed670-ui-ev-vs-charging-station-analysis-app-moqcks.streamlit.app/) 
 
-## 📊 **Datasets**
+---
+ 📊 **Datasets**
 
 - **Electric Vehicle Dataset**: Contains yearly EV adoption statistics across states.
 - **Charging Stations Dataset**: Tracks the expansion of charging infrastructure over time
@@ -22,21 +23,20 @@ Try the app here: [Open Live Demo](https://firdousnaheed670-ui-ev-vs-charging-st
 Both datasets are merged to uncover correlations between EV growth and charging station availability.
 
 ---
-
-## 🔍 Key Insights
+ 🔍 Key Insights
 - States like **Delhi** and **Maharashtra** show strong alignment between EV adoption and charging infrastructure.
 - Some regions reveal **imbalances** — rapid EV growth but slower charging station deployment.
 - The analysis highlights **policy implications** for accelerating infrastructure to match demand.
 
 ---
 
-## 🛠️ Tech Stack
+ 🛠️ Tech Stack
 - **Python** (Data Cleaning & Analysis)
 - **Pandas, Matplotlib, Seaborn** (Data Visualization)
 - **Streamlit** (Interactive Web App Deployment)
 
 ---
-## 📂 Project Structure
+ 📂 Project Structure
 EV-vs-Charging-Station-Analysis/
 
 │── data/
@@ -52,7 +52,7 @@ EV-vs-Charging-Station-Analysis/
 
 ---
 
-## ⚙️ Installation
+⚙️ Installation
 Clone the repository and install dependencies:
 
 ```bash
