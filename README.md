@@ -37,19 +37,16 @@ Both datasets are merged to uncover correlations between EV growth and charging 
 
 ---
  📂  **Project Structure**
+
 EV-vs-Charging-Station-Analysis/
-
-
 │── data/
-|   |
 │   ├── charging_stations.csv
 │   ├── electric_vehicle.xlsx
+│   ├── EV_Growth_Vs_Charging_Infrastructure.ipynb
 │   └── README.md
-│── EV_Growth_Vs_Charging_Infrastructure.ipynb   
-│── app.py                                       
-│── requirements.txt                             
-│── README.md             
-
+│── app.py
+│── requirements.txt
+│── README.md
 ---
 
 ---
