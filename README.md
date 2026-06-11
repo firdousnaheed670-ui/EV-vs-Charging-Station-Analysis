@@ -1,6 +1,10 @@
 # 🚗⚡ **EV Growth vs Charging Infrastructure in India**
+
+
 ---
 ## 📌** Problem Statement**
+
+
 
 Electric vehicle adoption in India is growing rapidly, but the expansion of charging infrastructure has not kept pace.  
 This imbalance creates accessibility challenges for EV users and highlights the need for better planning and investment in charging stations.
