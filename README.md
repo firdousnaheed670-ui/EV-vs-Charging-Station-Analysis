@@ -52,6 +52,7 @@ Both datasets are merged to uncover correlations between EV growth and charging 
 ---
 
 ⚙️  **Installation**
+
 Clone the repository and install dependencies:
 
 ```bash
